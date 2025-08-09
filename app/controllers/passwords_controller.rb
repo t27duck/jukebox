@@ -1,8 +1,13 @@
+# frozen_string_literal: true
+
 class PasswordsController < ApplicationController
   allow_unauthenticated_access
-  before_action :set_user_by_token, only: %i[ edit update ]
+  before_action :set_user_by_token, only: [ :edit, :update ]
 
   def new
+  end
+
+  def edit
   end
 
   def create
@@ -11,9 +16,6 @@ class PasswordsController < ApplicationController
     end
 
     redirect_to new_session_path, notice: "Password reset instructions sent (if user with that email address exists)."
-  end
-
-  def edit
   end
 
   def update
