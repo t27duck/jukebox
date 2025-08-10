@@ -18,7 +18,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    params[:files].map do |file|
+    params[:files].compact_blank!.each do |file|
       Song.create!(file: file)
     end
 
