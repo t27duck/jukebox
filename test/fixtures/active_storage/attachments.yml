@@ -1,0 +1,29 @@
+song_one_file:
+  name: file
+  record: one (Song)
+  blob: song_one_file_blob
+
+song_one_cover_image:
+  name: cover_image
+  record: one (Song)
+  blob: song_one_cover_image_blob
+
+song_two_file:
+  name: file
+  record: two (Song)
+  blob: song_two_file_blob
+
+song_one_cover_image:
+  name: cover_image
+  record: two (Song)
+  blob: song_two_cover_image_blob
+
+song_three_file:
+  name: file
+  record: three (Song)
+  blob: song_three_file_blob
+
+song_three_cover_image:
+  name: cover_image
+  record: three (Song)
+  blob: song_three_cover_image_blob

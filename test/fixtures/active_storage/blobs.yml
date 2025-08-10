@@ -1,0 +1,11 @@
+song_one_file_blob: <%= ActiveStorage::FixtureSet.blob filename: "song.mp3", service_name: "test" %>
+
+song_one_cover_image_blob: <%= ActiveStorage::FixtureSet.blob filename: "cover_image.png", service_name: "test" %>
+
+song_two_file_blob: <%= ActiveStorage::FixtureSet.blob filename: "song.mp3", service_name: "test" %>
+
+song_two_cover_image_blob: <%= ActiveStorage::FixtureSet.blob filename: "cover_image.png", service_name: "test" %>
+
+song_three_file_blob: <%= ActiveStorage::FixtureSet.blob filename: "song.mp3", service_name: "test" %>
+
+song_three_cover_image_blob: <%= ActiveStorage::FixtureSet.blob filename: "cover_image.png", service_name: "test" %>

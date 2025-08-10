@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Song One
+  artist: Artist One
+  album: Album One
+
+two:
+  title: Song Two
+  artist: Artist One
+  album: Album One
+
+three:
+  title: Song Three
+  artist: Artist Two
+  album: Album Two

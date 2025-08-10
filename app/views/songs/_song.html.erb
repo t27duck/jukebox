@@ -1,0 +1,13 @@
+<div id="<%= dom_id song %>" class="flex items-center my-5 space-x-5">
+  <% if song.cover_image.attached? %>
+    <%= image_tag song.cover_image.variant(resize_to_limit: [100, 100]), class: "block w-24 h-24 object-cover" %>
+  <% else %>
+    <div class="w-24 h-24">&nbsp;</div>
+  <% end %>
+  <div class="space-y-1">
+    <strong class="block font-medium"><%= song.title %></strong>
+    <span class="block text-gray-500"><%= song.artist %></span>
+    <span class="block text-gray-500"><%= song.album %></span>
+    <span class="block text-gray-500"><%= link_to song.file.filename, song.file, class: "text-gray-700 underline hover:no-underline" if song.file.attached? %></span>
+  </div>
+</div>
