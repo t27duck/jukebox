@@ -2,7 +2,7 @@
   controller: "player visualization",
   class: "w-full"
 } do %>
-  <%= image_tag "/default_cover_image.png", data: { player_target: "coverImage" }, class: "absolute top-6 left-6 w-64 h-64 object-cover" %>
+  <%= tag.div nil, data: { player_target: "coverImage" }, style: "background-image: url('/default_cover_image.png');", class: "absolute top-6 left-6 w-64 h-64 bg-cover transition-all duration-1000 ease-in-out" %>
 
   <div class="fixed bottom-5 left-4 w-[calc(100%-2rem)]">
     <div class="max-w-screen-xl" data-visualization-target="container">

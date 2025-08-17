@@ -81,6 +81,10 @@ export default class extends Controller {
   }
 
   coverImageValueChanged() {
-    this.coverImageTarget.src = this.coverImageValue || "/default_cover_image.png";
+    const image = new Image();
+    image.src = this.coverImageValue || "/default_cover_image.png";
+    image.onload = () => {
+      this.coverImageTarget.style.backgroundImage = `url('${this.coverImageValue || "/default_cover_image.png"}')`;
+    };
   }
 }
