@@ -2,6 +2,7 @@
 
 class PlayerController < ApplicationController
   def index
+    @full_page = true
   end
 
   def next

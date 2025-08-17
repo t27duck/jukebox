@@ -2,18 +2,24 @@
   controller: "player visualization",
   class: "w-full"
 } do %>
-  <div class="max-w-screen-xl mx-auto px-6 py-16" data-visualization-target="container">
-    <div class="w-full h-48">
-      <canvas data-visualization-target="canvas" class="w-full h-full"></canvas>
+  <%= image_tag "/default_cover_image.png", data: { player_target: "coverImage" }, class: "absolute top-6 left-6 w-64 h-64 object-cover" %>
+
+  <div class="fixed bottom-5 left-4 w-[calc(100%-2rem)]">
+    <div class="max-w-screen-xl" data-visualization-target="container">
+      <div class="w-full h-48">
+        <canvas data-visualization-target="canvas" class="w-full h-full"></canvas>
+      </div>
+    </div>
+
+    <div class="rounded-lg shadow-lg border-10 border-blue-500 p-4">
+      <div>
+        <span data-player-target="currentTime">0:00</span> / <span data-player-target="duration">0:00</span>
+      </div>
+
+      <div data-player-target="title">-</div>
+      <div data-player-target="artist">-</div>
+      <div data-player-target="album">-</div>
+      <%= audio_tag "", controls: true, autoplay: false, id: "audio-player", data: { player_target: "audio", visualization_target: "audio" }, class: "hidden" %>
     </div>
   </div>
-
-  <div>
-    <span data-player-target="currentTime">0:00</span> / <span data-player-target="duration">0:00</span>
-  </div>
-  <%= image_tag "/default_cover_image.png", data: { player_target: "coverImage" }, class: "w-64 h-64 object-cover mb-4" %>
-  <div data-player-target="title">-</div>
-  <div data-player-target="artist">-</div>
-  <div data-player-target="album">-</div>
-  <%= audio_tag "", controls: true, autoplay: false, id: "audio-player", data: { player_target: "audio", visualization_target: "audio" }, class: "block" %>
 <% end %>
