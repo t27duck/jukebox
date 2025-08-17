@@ -16,4 +16,12 @@ class PlayerController < ApplicationController
       cover_image: url_for(@song.cover_image)
     }
   end
+
+  def background
+    @background = Background.order("RANDOM()").take
+
+    render json: {
+      image_url: url_for(@background.image)
+    }
+  end
 end

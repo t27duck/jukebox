@@ -11,12 +11,14 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
+  resources :backgrounds
   resources :songs
   resource :session
   resources :passwords, param: :token
 
   get "/player", to: "player#index", as: :player
   get "/player/next", to: "player#next", as: :player_next
+  get "/player/background", to: "player#background", as: :player_background
 
   # Defines the root path route ("/")
   root "player#index"
