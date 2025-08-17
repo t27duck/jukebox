@@ -2,11 +2,10 @@
 
 class PlayerController < ApplicationController
   def index
-    # @song = Song.order("RANDOM()").first
   end
 
   def next
-    @song = Song.order("RANDOM()").first
+    @song = QueuedSong.next_for(session.id.to_s)
 
     render json: {
       title: @song.title,
