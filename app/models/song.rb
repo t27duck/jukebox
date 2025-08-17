@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Song < ApplicationRecord
+  has_many :queued_songs, dependent: :destroy
+
   has_one_attached :file
   has_one_attached :cover_image
 
