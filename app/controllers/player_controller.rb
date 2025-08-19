@@ -3,6 +3,7 @@
 class PlayerController < ApplicationController
   def index
     @full_page = true
+    @setup_background = true
   end
 
   def next

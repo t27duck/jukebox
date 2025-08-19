@@ -22,7 +22,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-cover transition-all duration-1000 ease-in-out" data-controller="background">
+  <body <% if @setup_background %>class="bg-cover transition-all duration-1000 ease-in-out" data-controller="background"<% end %>>
     <main class="container <%= @full_page ? "" : "mx-auto mt-28 px-5"%>">
       <%= yield %>
     </main>
